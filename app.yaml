@@ -1,0 +1,11 @@
+# [START runtime]
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT comments_app.wsgi
+
+beta_settings:
+    cloud_sql_instances: tarea1-comments-app-iic2173:us-central1:comments-instance
+
+runtime_config:
+  python_version: 3
+# [END runtime]virt
